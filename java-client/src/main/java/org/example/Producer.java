@@ -1,4 +1,4 @@
-package com.viettel.vdt.kafka;
+package org.example;
 
 import org.apache.kafka.clients.producer.*;
 
@@ -18,6 +18,7 @@ public class Producer {
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, BOOTSTRAP_SERVERS);
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+
 
         try (KafkaProducer<String, String> producer = new KafkaProducer<>(props);
              BufferedReader reader = new BufferedReader(new FileReader(dataPath))) {

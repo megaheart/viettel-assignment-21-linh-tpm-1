@@ -66,9 +66,12 @@ services:
     volumes:
       - ./kafka/connectors:/home/appuser/connectors
       - ./kafka/libs:/home/appuser/libs
+      - ./kafka/data_unprocessed:/data/unprocessed
+      - ./kafka/data_error:/data/error
+      - ./kafka/data_processed:/data/processed
     environment:
       CLASSPATH: /home/appuser/libs/*
-      CONNECT_BOOTSTRAP_SERVERS: "broker01:9093,broker02:9093"
+      CONNECT_BOOTSTRAP_SERVERS: "broker01:9093"
       CONNECT_REST_ADVERTISED_HOST_NAME: "kc01"
       CONNECT_REST_PORT: 8083
       CONNECT_GROUP_ID: kafka-connect-vdt
@@ -212,6 +215,6 @@ services:
           - ./nifi/state:/opt/nifi/nifi-current/state
           - ./nifi/logs:/opt/nifi/nifi-current/logs
           # uncomment the next line after copying the /conf directory from the container to your local directory to persist NiFi flows
-          #- ./nifi/conf:/opt/nifi/nifi-current/conf
+          # - ./nifi/conf:/opt/nifi/nifi-current/conf
 
   

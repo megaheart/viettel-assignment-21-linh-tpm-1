@@ -163,13 +163,18 @@ cython_debug/
 
 # Ignore docker compose volumes
 hadoop_volume/
-nifi/content_repository/
-nifi/flowfile_repository/
-nifi/provenance_repository/
-nifi/state/
-nifi/database_repository/
-nifi/logs/
+# nifi/content_repository/
+# nifi/flowfile_repository/
+# nifi/provenance_repository/
+# nifi/state/
+# nifi/database_repository/
+# nifi/logs/
 hadoop/hadoop_namenode/
 hadoop/hadoop_datanode1/
 hadoop/hadoop_datanode2/
 hadoop/hadoop_datanode3/
+kafka/data_error
+kafka/data_processed
+kafka/data_unprocessed
+**/*.p12
+nifi.docker-compose.yml

@@ -465,7 +465,7 @@
 #  password.
 #  Default: ''
 # Pass: Linhdeptraivcl
-c.NotebookApp.password = 'sha1::b7de18a4ccda9b476b896797a0af13aa48ef2c73'
+c.NotebookApp.password = 'sha1::7c4a8d09ca3762af61e59520943dc26494f8941b'
 
 ## Forces users to use a password for the Notebook server.
 #                        This is useful in a multi user environment, for instance when
@@ -788,7 +788,7 @@ c.NotebookApp.password_required = True
 
 ## Debug output in the Session
 #  Default: False
-# c.Session.debug = False
+c.Session.debug = False
 
 ## The maximum number of digests to remember.
 #  
